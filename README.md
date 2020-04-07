@@ -1,7 +1,7 @@
-\# Unix Workbench Final Project: Guessinggame
+Unix Workbench Final Project: Guessinggame
 
-\#\# Date make was run:
-Tue Apr  7 17:51:50 EDT 2020
+Date make was run:
+Tue Apr  7 18:08:43 EDT 2020
 
-\#\# Lines of code:
+Lines of code:
 34 guessinggame.sh
