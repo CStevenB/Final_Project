@@ -7,11 +7,16 @@ function user_input {
 	echo "Type in an integer and press Enter:"
 	read response
 	echo "You entered: $response"
+	while [[ $response != [0-9]* ]]
+	do
+		echo "Not an integer. Try again:"
+		read response
+	done
 }
 
 user_input
 
-number_of_files=$( ls | wc -l )
+number_of_files=$( ls -1A | wc -l )
 
 while  [[ $response -ne $number_of_files ]]
 do
@@ -23,7 +28,7 @@ do
 		if [[ $response -gt $number_of_files ]]
 		then
 			echo "Sorry, that number is too high. Please try again."
-			user_input			fi
+			user_input
 		fi
 	fi
 done
