@@ -6,12 +6,12 @@ function user_input {
 	echo "How many files do you think are in the current directory?"
 	echo "Type in an integer and press Enter:"
 	read response
-	echo "You entered: $response"
-	while [[ $response != [0-9]* ]]
+	while [[ ! $response =~ ^[0-9]+$ ]]
 	do
 		echo "Not an integer. Try again:"
 		read response
 	done
+	echo "You entered $response"
 }
 
 user_input
